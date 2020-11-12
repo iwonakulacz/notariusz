@@ -1,0 +1,291 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+b {
+  font-weight: 600;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  line-height: 1;
+  animation: fadeIn 0.4s;
+}
+p {
+  line-height: 2em;
+  font-size: 16px;
+  text-align: justify;
+}
+.img {
+  max-width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 8px -2px rgb(93, 93, 93);
+}
+#header {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: url("./images/timida.JPEG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgb(36, 36, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(36, 36, 36, 0.65) 0%,
+    rgba(73, 73, 73, 0.09) 50%,
+    rgba(36, 36, 36, 0.65) 100%
+  );
+}
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#header .contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  background: rgba(12, 12, 12, 0.56);
+  color: #ffffff;
+  padding: 15px;
+  z-index: 1;
+}
+
+#header .contact .tel {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#header .mainText {
+  text-align: right;
+  font-size: 45px;
+  background: rgba(12, 12, 12, 0.56);
+  color: #ffffff;
+  padding: 15px 50px;
+  z-index: 1;
+  position: absolute;
+  bottom: 10vh;
+  right: 10vw;
+}
+
+#header .mainText .name {
+  margin: 10px 0 20px 0;
+  font-family: "Parisienne", cursive;
+  font-size: 60px;
+}
+
+#header .mainText .subtitle {
+  font-style: italic;
+  font-size: 37px;
+}
+#main {
+  padding-top: 80px;
+}
+#main #info {
+  width: 80%;
+  margin: 50px auto;
+  background: #e4e4e4a8;
+  font-weight: 500;
+  padding: 40px;
+  box-shadow: 0px 0px 5px -2px rgb(88, 88, 88);
+}
+#main #info p {
+  text-align: center;
+}
+#main .grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#main .grid .text {
+  padding-right: 90px;
+}
+#main .sidebar {
+  flex-basis: 400px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+#main .sidebar .contactSection {
+  line-height: 1.5em;
+  text-align: center;
+}
+#main .sidebar .contactSection p {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+.pageHeader {
+  font-size: 24px;
+  margin: 20px 0;
+}
+.pageHeader::first-letter {
+  font-family: "Parisienne", cursive;
+  font-size: 42px;
+}
+.signature {
+  text-align: right;
+  font-size: 32px;
+  padding: 25px 0;
+  font-family: "Parisienne", cursive;
+}
+.separator {
+  width: 100%;
+  padding: 120px 20px;
+  text-align: center;
+  background: url("./images/bgn.JPEG");
+  background-size: cover;
+  background-position: center;
+  margin-top: 70px;
+  box-shadow: 0px 0px 10px -3px rgba(51, 51, 51, 1);
+}
+.separator p {
+  color: #ffffff;
+  font-family: "Parisienne", cursive;
+  font-size: 40px;
+  font-weight: 600;
+  background: rgba(12, 12, 12, 0.56);
+  margin: auto;
+  padding: 10px 25px;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  padding: 40px 0;
+  background: #000000;
+  color: #d4d4d4;
+  font-size: 15px;
+  line-height: 1.6em;
+}
+.footer .wrapper {
+  flex-direction: column;
+}
+@media screen and (max-width: 1400px) {
+  #header .mainText {
+    transform: translate(0);
+    margin: auto 0 10vh auto;
+    position: relative;
+    bottom: unset;
+    right: unset;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .separator p {
+    font-size: 38px;
+    line-height: 45px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 960px;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #header {
+    height: unset;
+    justify-content: space-between;
+  }
+  #header .wrapper {
+    padding: 0;
+    max-width: 100%;
+  }
+  #header .mainText {
+    font-size: 30px;
+    text-align: center;
+    margin: 150px 0 0 0;
+    padding: 40px 20px;
+  }
+  #header .contact {
+    position: relative;
+    text-align: center;
+    margin: 0 0 50px 0;
+    top: unset;
+    right: unset;
+  }
+  #header .mainText .name {
+    margin: 10px 0 20px 0;
+  }
+  #header .mainText .subtitle {
+    font-size: 25px;
+  }
+  .brOnMobile {
+    display: block;
+    margin-top: 5px;
+  }
+  #main .grid {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  #main .grid .text {
+    padding-right: 0;
+  }
+  #main .grid .text {
+    padding-right: 0;
+  }
+  .signature {
+    font-size: 28px;
+    padding: 20px 0;
+  }
+  #main #info {
+    width: 100%;
+  }
+  #main .sidebar {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+  .separator p {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
